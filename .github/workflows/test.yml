@@ -37,9 +37,6 @@ jobs:
         run: forge test --ffi -vvv
 
       HEAD
-      - name: Run Forge tests
-        run: |
-          forge test --ffi -vvv
-        id: test
+      
 
        1f4eb2b (Fix: working CI with FFI for Foundry tests)

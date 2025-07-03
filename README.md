@@ -1,13 +1,64 @@
-## Foundry
+# 🏗️ FundMe – A Decentralized Crowdfunding Smart Contract
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+FundMe is a Solidity smart contract project built with the **Foundry** framework. This project allows users to **fund a contract** with ETH and enables the contract owner to **withdraw** the accumulated funds. It also demonstrates advanced Foundry testing, mock deployments, and scripting.
 
-Foundry consists of:
+---
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## 📦 Features
+
+- Users can fund the contract with a minimum ETH threshold  
+- Only the **owner** can withdraw the funds  
+- Uses **Chainlink Price Feeds** to get real-time ETH/USD price  
+- Fully tested with **Foundry unit and integration tests**  
+- Gas-optimized with best Solidity practices  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Solidity** – Smart contract language  
+- **Foundry** – Fast, portable, and modular toolkit for Ethereum development  
+- **Chainlink** – Decentralized oracle for real-time ETH/USD conversion  
+- **GitHub Actions** – CI/CD automation  
+
+---
+
+## 📁 Project Structure
+fundme-foundry/
+│
+├── contracts/ # FundMe smart contracts
+│ ├── FundMe.sol
+│ └── PriceConverter.sol
+│
+├── script/ # Deployment and interaction scripts
+│ └── DeployFundMe.s.sol
+│
+├── test/ # Unit and integration tests
+│ └── FundMe.t.sol
+│
+├── lib/ # Dependencies (e.g., Chainlink, Foundry standard library)
+│
+├── .github/workflows/ # GitHub CI config
+│ └── test.yml
+│
+├── foundry.toml # Foundry config file
+└── README.md # Project documentation
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Foundry (install via: `curl -L https://foundry.paradigm.xyz | bash`)
+- Node.js (for some optional tooling)
+- Git
+- An Ethereum wallet + RPC URL (e.g., Infura, Alchemy,Anvil)
+
+### Installation
+
+```bash
+git clone https://github.com/ayush1097/fundme-foundry-f25.git
+cd fundme-foundry
+forge install
 
 ## Documentation
 
@@ -21,22 +72,24 @@ https://book.getfoundry.sh/
 $ forge build
 ```
 
-### Test
+### Deploy Locally
 
 ```shell
-$ forge test
+forge script script/DeployFundMe.s.sol --fork-url <RPC_URL> --broadcast
+
 ```
 
-### Format
+### Run Test
 
 ```shell
-$ forge fmt
+forge test -vv
+
 ```
 
-### Gas Snapshots
+### Format Code
 
 ```shell
-$ forge snapshot
+forge fmt
 ```
 
 ### Anvil

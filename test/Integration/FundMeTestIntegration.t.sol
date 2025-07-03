@@ -2,9 +2,9 @@
 
 pragma solidity ^0.8.18;
 
-import {DeployFundMe} from "../../script/FundMeScript.s.sol";
+import {DeployFundMe} from "../../script/FundmeScript.s.sol";
 import {FundFundMe, WithdrawFundMe} from "../../script/Interaction.s.sol";
-import {FundMe} from "../../src/FundMe.sol";
+import {FundMe} from "../../src/Fundme.sol";
 import {Test, console} from "forge-std/Test.sol";
 
 contract InteractionsTest is Test {

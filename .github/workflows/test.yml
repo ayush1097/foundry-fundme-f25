@@ -12,7 +12,8 @@ jobs:
   test:
     name: Run Foundry Tests
     runs-on: ubuntu-latest
-
+    env:
+      FOUNDRY_DISABLE_NIGHTLY_WARNING: 1
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4

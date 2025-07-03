@@ -24,26 +24,30 @@ FundMe is a Solidity smart contract project built with the **Foundry** framework
 ---
 
 ## 📁 Project Structure
+
+```text
 fundme-foundry/
 │
-├── contracts/ # FundMe smart contracts
-│ ├── FundMe.sol
-│ └── PriceConverter.sol
+├── contracts/               # FundMe smart contracts
+│   ├── FundMe.sol
+│   └── PriceConverter.sol
 │
-├── script/ # Deployment and interaction scripts
-│ └── DeployFundMe.s.sol
+├── script/                  # Deployment and interaction scripts
+│   └── DeployFundMe.s.sol
 │
-├── test/ # Unit and integration tests
-│ └── FundMe.t.sol
+├── test/                    # Unit and integration tests
+│   └── FundMe.t.sol
 │
-├── lib/ # Dependencies (e.g., Chainlink, Foundry standard library)
+├── lib/                     # Dependencies (e.g., Chainlink, Foundry standard library)
 │
-├── .github/workflows/ # GitHub CI config
-│ └── test.yml
+├── .github/
+│   └── workflows/           # GitHub CI configuration
+│       └── test.yml
 │
-├── foundry.toml # Foundry config file
-└── README.md # Project documentation
+├── foundry.toml             # Foundry config file
+└── README.md                # Project documentation
 
+```
 ## 🚀 Getting Started
 
 ### Prerequisites
